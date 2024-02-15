@@ -7,15 +7,15 @@ const Callback = () => {
       "#access_token"
     );
     if (token) {
-      // Store the token in local storage or state management
+    
       localStorage.setItem("spotifyToken", token);
 
-      // Fetch top tracks and play them
+    
       getTopTracks(token)
         .then((topTracks) => {
-          // Play the tracks
+    
           console.log("Top tracks:", topTracks);
-          // Implement logic to play tracks
+        
         })
         .catch((error) => {
           console.error("Error fetching top tracks:", error);

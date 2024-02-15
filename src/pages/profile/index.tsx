@@ -10,7 +10,8 @@ import {
   StatLabel,
   StatNumber,
   Button,
-  Box,
+
+  // Box,
   // Card,
   // CardBody,
   // CardFooter,
@@ -28,6 +29,8 @@ import {
   // FaFigma,
   // FaGitAlt,
 } from "react-icons/fa6";
+
+import { Link } from "react-router-dom";
 
 // import { RiFlutterFill, RiJavascriptFill } from "react-icons/ri";
 // import {
@@ -227,20 +230,26 @@ const Profile = () => {
               once: true,
             }}
           >
-            <Button
-              leftIcon={<FaInstagram />}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.25rem"}
-              size={"lg"}
-              w={"10rem"}
-              color={"bg"}
-              bgColor={"fg"}
-              rounded={"full"}
+            <Link
+              to="https://www.instagram.com/falydra"
+              target="_blank "
+              rel="noopener noreferrer"
             >
-              Instagram
-            </Button>
+              <Button
+                leftIcon={<FaInstagram />}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"start"}
+                gap={"0.25rem"}
+                size={"lg"}
+                w={"10rem"}
+                color={"bg"}
+                bgColor={"fg"}
+                rounded={"full"}
+              >
+                Instagram
+              </Button>
+            </Link>
           </MotionBox>
           <MotionBox
             initial={{
@@ -293,20 +302,26 @@ const Profile = () => {
               once: true,
             }}
           >
-            <Button
-              leftIcon={<FaGithub />}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.75rem"}
-              size={"lg"}
-              w={"10rem"}
-              color={"bg"}
-              bgColor={"fg"}
-              rounded={"full"}
+            <Link
+              to="https://github.com/Falydra"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Github
-            </Button>
+              <Button
+                leftIcon={<FaGithub />}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"start"}
+                gap={"0.75rem"}
+                size={"lg"}
+                w={"10rem"}
+                color={"bg"}
+                bgColor={"fg"}
+                rounded={"full"}
+              >
+                Github
+              </Button>
+            </Link>
           </MotionBox>
           <MotionBox
             initial={{
@@ -326,391 +341,26 @@ const Profile = () => {
               once: true,
             }}
           >
-            <Button
-              leftIcon={<FaDiscord />}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.75rem"}
-              size={"lg"}
-              w={"10rem"}
-              color={"bg"}
-              bgColor={"fg"}
-              rounded={"full"}
+            <Link
+              to="https://discord.com/users/725215029103689838"
+              target="_blank"
+              rel="nooppener noreferrer"
             >
-              Discord
-            </Button>
-          </MotionBox>
-        </Stack>
-        <MotionBox
-          initial={{
-            y: "100px",
-            opacity: 0,
-          }}
-          whileInView={{
-            y: "0px",
-            opacity: 1,
-          }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.25,
-          }}
-          viewport={{
-            once: true,
-          }}
-        >
-          <Heading textAlign={"center"} fontSize={"24"} pt={"4rem"}>
-            Skill
-          </Heading>
-        </MotionBox>
-
-        <Stack
-          direction={["column-reverse", "column-reverse", "row", "row", "row"]}
-          w={"full"}
-          align={["center", "center", "flex-end", "flex-end", "flex-end"]}
-          justify={"space-evenly"}
-          my={"2rem"}
-          gap={"2rem"}
-        >
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 0.75,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.5rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-              borderWidth={"1px"}
-              textAlign={"end"}
-            >
-              Figma
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.95rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              React
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.25,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"1rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              Flutter
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.5,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.5rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              Javascript
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.75,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.25rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              Chakra UI
-            </Box>
-          </MotionBox>
-        </Stack>
-        <Stack
-          direction={["column-reverse", "column-reverse", "row", "row", "row"]}
-          w={"full"}
-          align={["center", "center", "flex-end", "flex-end", "flex-end"]}
-          justify={"space-evenly"}
-          my={"2rem"}
-          gap={"2rem"}
-        >
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 0.75,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              ReactNative
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"1.5rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              Git
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.25,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              TailwindCSS
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.5,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.25rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              Typescript
-            </Box>
-          </MotionBox>
-          <MotionBox
-            initial={{
-              y: "100px",
-              opacity: 0,
-            }}
-            whileInView={{
-              y: "0px",
-              opacity: 1,
-            }}
-            transition={{
-              ease: "easeInOut",
-              duration: 1,
-              delay: 1.75,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
-              gap={"0.75rem"}
-              boxSize={"lg"}
-              w={"10rem"}
-              h={"3.5rem"}
-              color={"fg"}
-              bgColor={"transparent"}
-              rounded={"md"}
-            >
-              MySQL
-            </Box>
+              <Button
+                leftIcon={<FaDiscord />}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"start"}
+                gap={"0.75rem"}
+                size={"lg"}
+                w={"10rem"}
+                color={"bg"}
+                bgColor={"fg"}
+                rounded={"full"}
+              >
+                Discord
+              </Button>
+            </Link>
           </MotionBox>
         </Stack>
       </Stack>

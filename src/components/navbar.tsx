@@ -22,13 +22,13 @@ import {
 import {
   FaBars,
   FaUser,
-  FaFolder,
-  FaImage,
-  FaEnvelope,
-  FaInstagram,
-  FaGithub,
-  FaLinkedinIn,
-  FaGoogleDrive,
+  // FaFolder,
+  // FaImage,
+  // FaEnvelope,
+  // FaInstagram,
+  // FaGithub,
+  // FaLinkedinIn,
+  // FaGoogleDrive,
 } from "react-icons/fa6";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -94,7 +94,12 @@ const Navbar = () => {
             onClick={onOpen}
           />
 
-          <Drawer placement={"right"} onClose={onClose} isOpen={isOpen}>
+          <Drawer
+            placement={"top"}
+            onClose={onClose}
+            isOpen={isOpen}
+            size={"2rem"}
+          >
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
@@ -133,157 +138,6 @@ const Navbar = () => {
                       color={"accent"}
                     >
                       Profile
-                    </Button>
-                  </Link>
-
-                  {/*Code Projects Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      leftIcon={<FaFolder />}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      Programming Projects
-                    </Button>
-                  </Link>
-
-                  {/*Design Projects Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaImage />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      UI Design Projects
-                    </Button>
-                  </Link>
-                  {/*Profile Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaGoogleDrive />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      Other Projects
-                    </Button>
-                  </Link>
-
-                  {/*Massage Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaEnvelope />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      Message
-                    </Button>
-                  </Link>
-
-                  {/*Profile Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaInstagram />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      Instagram
-                    </Button>
-                  </Link>
-                  {/*Profile Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaLinkedinIn />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      LinkedIn
-                    </Button>
-                  </Link>
-                  {/*Profile Menu*/}
-                  <Link
-                    as={RouterLink}
-                    to={"/profile"}
-                    w={"full"}
-                    my={"0.5rem"}
-                  >
-                    <Button
-                      variant={"ghost"}
-                      display={"flex"}
-                      alignItems={"center"}
-                      justifyContent={"start"}
-                      gap={"0.5rem"}
-                      leftIcon={<FaGithub />}
-                      size={"lg"}
-                      w={"full"}
-                      color={"accent"}
-                    >
-                      Github
                     </Button>
                   </Link>
                 </Stack>

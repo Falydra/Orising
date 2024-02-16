@@ -45,7 +45,7 @@ const Profile = () => {
   return (
     <>
       <Stack
-        minH={"200vh"}
+        minH={"130vh"}
         bgColor={"bg"}
         align={"start"}
         // justify={"center"}

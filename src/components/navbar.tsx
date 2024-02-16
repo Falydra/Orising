@@ -21,6 +21,7 @@ import {
 
 import {
   FaBars,
+  FaFolder,
   FaUser,
   // FaFolder,
   // FaImage,
@@ -138,6 +139,26 @@ const Navbar = () => {
                       color={"accent"}
                     >
                       Profile
+                    </Button>
+                  </Link>
+                  <Link
+                    as={RouterLink}
+                    to={"/projects"}
+                    w={"full"}
+                    my={"0.5rem"}
+                  >
+                    <Button
+                      variant={"ghost"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      justifyContent={"start"}
+                      gap={"0.5rem"}
+                      leftIcon={<FaFolder />}
+                      size={"lg"}
+                      w={"full"}
+                      color={"accent"}
+                    >
+                      Project
                     </Button>
                   </Link>
                 </Stack>

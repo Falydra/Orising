@@ -1,21 +1,6 @@
 import { StarIcon } from "@chakra-ui/icons";
-import {
-  Badge,
-  Box,
-  Link,
-  // Heading,
-  Image,
-  Stack,
-  // StackDivider,
-} from "@chakra-ui/react";
-// import {Cards} from "@/components/Cards";
-// import { useState } from "react";
-// import { StarIcon } from "@chakra-ui/icons";
-
-// interface Rand {
-//   min: number;
-//   max: number;
-// }
+import { Badge, Box, Link, Image, Stack } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 const Projects = () => {
   const ProjectTitle = {
@@ -73,7 +58,7 @@ const Projects = () => {
                 </Badge>
               </Box>
 
-              <Link>
+              <Link as={RouterLink} to={"/Project"}>
                 <Box
                   pt="3"
                   fontWeight="semibold"

@@ -6,8 +6,15 @@ import {
   Wrap,
   WrapItem,
   Text,
+  useTheme,
+  ChakraProvider,
+  extendTheme,
 } from "@chakra-ui/react";
 import useSound from "@/hooks/useSound";
+import { useState } from "react";
+// import React from "react";
+// import { toggleTheme } from "@/main";
+
 // import { getToken } from "@/api";
 // import { useState } from "react";
 
@@ -18,123 +25,160 @@ const Banner = () => {
   const [isPlayingKam, toggleKam] = useSound(
     "sound/y2mate.com - Tchaikovsky  Swan Lake Op 20 Act II No 10 Scene.mp3"
   );
-  // const [isPlayingBlow, setIsPlayingBlow] = useState(false);
+
+  const [currentTheme, setCurrentTheme] = useState(useTheme());
+
+  // const defaultTheme = useTheme();
+  const lightAcademiaTheme = extendTheme({
+    colors: {
+      bg: "#311C19",
+      fg: "#F0F0F2",
+      accent: "#8A6248",
+      secondary: "#E5C2AC",
+    },
+  });
+  const darkAcademiaTheme = extendTheme({
+    colors: {
+      bg: "#252022",
+      fg: "#e2e1e1",
+      accent: "#47bec1",
+      secondary: "#d3873b",
+    },
+  });
+
+  const handleToggleTheme = (theme) => {
+    setCurrentTheme(theme);
+  };
 
   return (
-    <Stack
-      id={"hero"}
-      minH={"70vh"}
-      // bgGradient={"linear(to-b, secondary, accent)"}
-      bgImage={"public/wallpaperflare.jpg"}
-      bgSize={"cover"}
-      direction={["column-reverse", "column-reverse", "row", "row", "row"]}
-      p={"4rem"}
-      pt={"6rem"}
-      zIndex={3}
-    >
-      {/* text */}
+    <ChakraProvider theme={currentTheme}>
       <Stack
-        flex={1}
-        justify={"center"}
-        align={["center", "center", "start", "start", "start"]}
-        color={"white"}
-        textAlign={["center", "center", "start", "start", "start"]}
+        id={"hero"}
+        minH={"70vh"}
+        // bgGradient={"linear(to-b, secondary, accent)"}
+        bgImage={"public/wallpaperflare.jpg"}
+        bgSize={"cover"}
+        direction={["column-reverse", "column-reverse", "row", "row", "row"]}
+        p={"4rem"}
+        pt={"6rem"}
+        zIndex={3}
       >
         {/* text */}
-        <Heading
-          size={"lg"}
-          fontWeight={"bold"}
-          color={"bg"}
-          textShadow={"0 0 20px rgba(0,0,0,0.5)"}
-        >
-          Hello, <br />
-          Welcome to Oriesy House
-        </Heading>
-        {/* text */}
-        <Text
-          fontWeight={"extrathin"}
-          color={"bg"}
-          textShadow={"0 0 20px rgba(0,0,0,0.5)"}
-        >
-          Call me Aly. Im a Generalist who loves to think. <br />
-          You wonder on what things i can do as a<br />
-          generalist? You’ll get to know me further here.
-        </Text>
-
         <Stack
-          direction={["column-reverse", "column-reverse", "row", "row", "row"]}
-          my={"2rem"}
-          gap={"2rem"}
+          flex={1}
+          justify={"center"}
+          align={["center", "center", "start", "start", "start"]}
+          color={"white"}
+          textAlign={["center", "center", "start", "start", "start"]}
         >
-          <Button
+          {/* text */}
+          <Heading
             size={"lg"}
-            w={"12rem"}
-            rounded={"full"}
-            color={"accent"}
-            fontWeight={"semibold"}
-            textAlign={"center"}
-            onClick={toggleKam}
-            textColor={"bg"}
+            fontWeight={"bold"}
+            color={"bg"}
+            textShadow={"0 0 20px rgba(0,0,0,0.5)"}
           >
-            Swan Lake
-          </Button>
-          <Button
-            size={"lg"}
-            w={"12rem"}
-            rounded={"full"}
-            color={"accent"}
-            fontWeight={"semibold"}
-            textAlign={"center"}
-            onClick={toggleBlow}
-            textColor={"bg"}
+            Hello, <br />
+            Welcome to Oriesy House
+          </Heading>
+          {/* text */}
+          <Text
+            fontWeight={"extrathin"}
+            color={"bg"}
+            textShadow={"0 0 20px rgba(0,0,0,0.5)"}
           >
-            Moonlight
-          </Button>
-        </Stack>
-      </Stack>
+            Call me Aly. Im a Generalist who loves to think. <br />
+            You wonder on what things i can do as a<br />
+            generalist? You’ll get to know me further here.
+          </Text>
 
-      {/* image */}
-      <Stack
-        flex={1}
-        justify={"center"}
-        align={["center", "center", "end", "end", "end"]}
-      >
-        <Wrap mx={"2rem"}>
-          <WrapItem>
-            <Avatar
-              h={"12rem"}
+          <Stack
+            direction={[
+              "column-reverse",
+              "column-reverse",
+              "row",
+              "row",
+              "row",
+            ]}
+            my={"2rem"}
+            gap={"2rem"}
+          >
+            <Button
+              size={"lg"}
               w={"12rem"}
-              size={"2xl"}
-              name="Aly"
-              src="/IMG_20230214_202043_685.jpg"
-            />{" "}
-          </WrapItem>
-        </Wrap>
+              rounded={"full"}
+              color={"accent"}
+              fontWeight={"semibold"}
+              textAlign={"center"}
+              onClick={() => {
+                toggleKam();
+                handleToggleTheme(lightAcademiaTheme);
+              }}
+              textColor={"bg"}
+            >
+              Swan Lake
+            </Button>
+            <Button
+              size={"lg"}
+              w={"12rem"}
+              rounded={"full"}
+              color={"accent"}
+              fontWeight={"semibold"}
+              textAlign={"center"}
+              onClick={() => {
+                toggleBlow();
+                handleToggleTheme(darkAcademiaTheme);
+              }}
+              textColor={"bg"}
+            >
+              Moonlight
+            </Button>
+          </Stack>
+        </Stack>
+
+        {/* image */}
+        <Stack
+          flex={1}
+          justify={"center"}
+          align={["center", "center", "end", "end", "end"]}
+        >
+          <Wrap mx={"2rem"}>
+            <WrapItem>
+              <Avatar
+                h={"12rem"}
+                w={"12rem"}
+                size={"2xl"}
+                name="Aly"
+                src="/IMG_20230214_202043_685.jpg"
+              />{" "}
+            </WrapItem>
+          </Wrap>
+        </Stack>
+        {
+          // <video
+          //   autoPlay
+          //   loop
+          //   playsInline
+          //   muted
+          //   style={{
+          //     top: 0,
+          //     left: 0,
+          //     position: "absolute",
+          //     width: "100vw",
+          //     height: "23.8%",
+          //     objectFit: "cover",
+          //     zIndex: -1,
+          //     opacity: "100%",
+          //   }}
+          // >
+          //   <source
+          //     src="/howl-and-sophie-in-the-flower-field-howls-moving-castle-moewalls-com.mp4"
+          //     type="video/mp4"
+          //   />
+          // </video>
+        }
       </Stack>
-      {
-        // <video
-        //   autoPlay
-        //   loop
-        //   playsInline
-        //   muted
-        //   style={{
-        //     top: 0,
-        //     left: 0,
-        //     position: "absolute",
-        //     width: "100vw",
-        //     height: "23.8%",
-        //     objectFit: "cover",
-        //     zIndex: -1,
-        //     opacity: "100%",
-        //   }}
-        // >
-        //   <source
-        //     src="/howl-and-sophie-in-the-flower-field-howls-moving-castle-moewalls-com.mp4"
-        //     type="video/mp4"
-        //   />
-        // </video>
-      }
-    </Stack>
+    </ChakraProvider>
   );
 };
 

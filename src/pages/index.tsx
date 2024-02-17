@@ -12,7 +12,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-import Banner from "@/components/banner";
+import Banner from "@/components/Banner";
 
 const HomePage = () => {
   return (

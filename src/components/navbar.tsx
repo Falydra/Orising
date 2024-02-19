@@ -96,7 +96,7 @@ const Navbar = () => {
           />
 
           <Drawer
-            placement={"top"}
+            placement={"right"}
             onClose={onClose}
             isOpen={isOpen}
             size={"2rem"}

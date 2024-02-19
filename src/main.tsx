@@ -10,6 +10,7 @@ import { Routes } from "@generouted/react-router";
   accent : #5483B3
   secondary : #7DA0CA
 */
+// const ThemeContext = createContext();
 
 const defaultTheme = extendTheme({
   colors: {
@@ -36,16 +37,31 @@ const defaultTheme = extendTheme({
 //     secondary: "#E5C2AC",
 //   },
 // });
+// const darkAcademiaTheme = extendTheme({
+//   colors: {
+//     bg: "#252022",
+//     fg: "#e2e1e1",
+//     accent: "#47bec1",
+//     secondary: "#d3873b",
+//   },
+// });
 
-// export const [isDarkMode, setIsDarkMode] = useState(true);
+// const ThemeProvider = ({ children }) => {
+//   const [theme, setTheme] = useState(defaultTheme);
 
-// export const toggleTheme = () => {
-//   setIsDarkMode((prevMode) => !prevMode);
+//   const toggleTheme = (newTheme) => {
+//     setTheme(newTheme);
+//   };
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
 // };
 
-// export const theme = extendTheme(
-//   isDarkMode ? defaultTheme : lightAcademiaTheme
-// );
+// // Create a custom hook to consume theme context
+// const useThemeContext = () => useContext(ThemeContext);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

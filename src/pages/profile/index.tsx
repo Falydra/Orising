@@ -32,14 +32,6 @@ import {
 
 import { Link } from "react-router-dom";
 
-// import { RiFlutterFill, RiJavascriptFill } from "react-icons/ri";
-// import {
-//   SiChakraui,
-//   SiTypescript,
-//   SiTailwindcss,
-//   SiMysql,
-// } from "react-icons/si";
-// import { TbBrandReactNative } from "react-icons/tb";
 
 const Profile = () => {
   return (

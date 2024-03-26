@@ -9,13 +9,7 @@ import {
   // ChakraProvider,
 } from "@chakra-ui/react";
 import useSound from "@/hooks/useSound";
-
-// import { useThemeContext } from "@/hooks/useTheme";
-// import React from "react";
-// import { toggleTheme } from "@/main";
-
-// import { getToken } from "@/api";
-// import { useState } from "react";
+import { useState } from "react";
 
 const Banner = () => {
   const [isPlayingBlow, toggleBlow] = useSound(
@@ -25,11 +19,6 @@ const Banner = () => {
     "sound/y2mate.com - Tchaikovsky  Swan Lake Op 20 Act II No 10 Scene.mp3"
   );
 
-  // const { toggleTheme } = useThemeContext(); // Use the custom hook
-
-  // const handleToggleTheme = (theme) => {
-  //   toggleTheme(theme);
-  // };
 
   return (
     <Stack

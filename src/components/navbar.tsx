@@ -23,13 +23,6 @@ import {
   FaBars,
   FaFolder,
   FaUser,
-  // FaFolder,
-  // FaImage,
-  // FaEnvelope,
-  // FaInstagram,
-  // FaGithub,
-  // FaLinkedinIn,
-  // FaGoogleDrive,
 } from "react-icons/fa6";
 import { Link as RouterLink } from "react-router-dom";
 
